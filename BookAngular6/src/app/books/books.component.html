@@ -1,5 +1,7 @@
  <ul class="books">
-  <li *ngFor="let book of books" (click)="onSelect(book)">
+  <li *ngFor="let book of books"
+  [class.selected]="book === selectedBook"
+  (click)="onSelect(book)">
     <span class="badge">{{book.id}}</span> {{book.name}}
   </li>
 </ul>
