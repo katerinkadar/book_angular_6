@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book';
+import { BOOKS } from '../mock-books';
 
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
-  styles: []
+  styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
-
-  book: Book = {
-    id: 1,
-    name: 'Приемы объектно-ориентированного проектирования. Паттерны проектирования'
-  };
-
+  books = BOOKS;
+  selectedBook: Book;
   constructor() { }
+
+  onSelect(book: Book): void {
+    this.selectedBook = book;
+  }
 
   ngOnInit() {
   }

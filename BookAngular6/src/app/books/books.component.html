@@ -1,7 +1,14 @@
-<h2>{{book.name| uppercase}}</h2>
-<div><span>Идентификатор: </span>{{book.id}}</div>
+ <ul class="books">
+  <li *ngFor="let book of books" (click)="onSelect(book)">
+    <span class="badge">{{book.id}}</span> {{book.name}}
+  </li>
+</ul>
+<div *ngIf="selectedBook">
+<h2>{{selectedBook.name | uppercase}}</h2>
+<div><span>Идентификатор: </span>{{selectedBook.id}}</div>
 <div>
   <label>Название книги:
-    <input [(ngModel)]="book.name" placeholder="Название книги">
+    <input [(ngModel)]="selectedBook.name" placeholder="Название книги">
   </label>
+</div>
 </div>
