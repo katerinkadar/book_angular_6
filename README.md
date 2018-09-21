@@ -1,4 +1,4 @@
-# book_angular_6
+# Редактор книг на Angular 6
 <p style="margin-bottom: 0.35cm"><font style="font-size: 12pt">Написать небольшое одностраничное веб-приложение &ndash; редактор книг.</font></p>
 <p style="margin-bottom: 0.35cm"><u><b>Цель</b></u>: продемонстрировать знание <span lang="en-US">JavaScript</span> и <span lang="en-US">SPA</span> фреймворков/архитектуры, HTML/CSS</p>
 <p style="margin-bottom: 0.35cm"><u><b>Оценивается</b></u>: полнота реализации требований, модульность и архитектура приложения, простота и читабельность кода, следование принципам <span lang="en-US">KIS</span>/<span lang="en-US">DRY</span></p>
