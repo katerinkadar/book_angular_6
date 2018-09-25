@@ -1,3 +1,9 @@
-<p>
-  book-detail works!
-</p>
+<div *ngIf="book">
+  <h2>{{book.name | uppercase}}</h2>
+  <div><span>Идентификатор: </span>{{book.id}}</div>
+  <div>
+    <label>Название книги:
+      <input [(ngModel)]="book.name" placeholder="Название книги">
+    </label>
+  </div>
+  </div>
