@@ -7,9 +7,10 @@
   </li>
 </ul>
 <div>
-    <label>Book name:
+    <label>Заголовок:
       <input #bookName />
-    </label>
+    </label> 
+    
     <!-- (click) passes input value to add() and then clears the input -->
     <button (click)="add(bookName.value); bookName.value=''">
       add

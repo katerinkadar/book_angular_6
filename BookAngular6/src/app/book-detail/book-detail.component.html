@@ -3,8 +3,28 @@
   <h2>{{book.name | uppercase}}</h2>
   <div>
     <label>Название книги:
-      <input [(ngModel)]="book.name" placeholder="Название книги">
-    </label>
+      <input [(ngModel)]="book.name" required type=text maxlength=30 placeholder="Название книги">
+    </label><br>
+    <label>Список авторов:
+        <div *ngFor="let author of book.author">
+        <input [(ngModel)]="author.authorName" required type=text maxlength=20 placeholder="Имя автора" />
+        <input [(ngModel)]="author.authorSurname" required type=text maxlength=20 placeholder="Фамилия автора"  /></div>
+    </label><br>
+    <label>Количество страниц: 
+        <input [(ngModel)]="book.numberOfPages" type=number min="0" max="10000" placeholder="Количество страниц" />
+    </label><br>
+    <label>Название издательства: 
+        <input [(ngModel)]="book.publisherName" type=text maxlength=30 placeholder="Название издательства" />
+    </label><br>
+    <label>год публикации: 
+        <input [(ngModel)]="book.yearOfPublication" type=number min=1800 placeholder="год публикации" />
+    </label><br>
+    <label>Дата выхода в тираж: 
+        <input [(ngModel)]="book.releaseDate" type="datetime" placeholder="Дата выхода в тираж" />
+    </label><br>
+    <label>ISBN: 
+        <input [(ngModel)]="book.ISBN" type=text  pattren="^(?:ISBN(?:-13)?:?\)?(?=[0-9]{13}$|(?=(?:[0-9]+[-\]){4})[-\0-9]{17}$)97[89][-\]?[0-9]{1,5}[-\]?[0-9]+[-\]?[0-9]+[-\]?[0-9]$" placeholder="ISBN" />
+    </label><br>
     <button (click)="save()">save</button>
   </div>
   </div>
