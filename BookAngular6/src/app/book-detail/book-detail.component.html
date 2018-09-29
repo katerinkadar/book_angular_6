@@ -1,6 +1,6 @@
 <div *ngIf="book">
+  <button (click)="goBack()">go back</button>
   <h2>{{book.name | uppercase}}</h2>
-  <div><span>Идентификатор: </span>{{book.id}}</div>
   <div>
     <label>Название книги:
       <input [(ngModel)]="book.name" placeholder="Название книги">
